@@ -25,8 +25,7 @@ $(document).on("click", "#openDir", function () {
 function dataLoading(){
 	let params = {};
 	ajq('/info', params, function(data) {
-		console.log(data);
-		if (data.downloading==false){
+		if (data.downloading!=true){
 			window.close(); 
 		}
 	});
